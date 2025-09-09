@@ -1,84 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TisSugar - Type-A Performance</title>
-<style>
-  body, html {
-    margin: 0;
-    height: 100%;
-    background: #f0f0f0;
-    font-family: sans-serif;
-  }
-  #loader {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    display: flex;
-    align-items: center; justify-content: center;
-    background: white;
-    z-index: 2;
-    transition: opacity 2s ease;
-    opacity: 1;
-  }
-  #loader.fadeout {
-    opacity: 0;
-    pointer-events: none;
-  }
-  .bar-loader {
-    width: 100px;
-    height: 14px;
-    background: #ececec;
-    border-radius: 7px;
-    overflow: hidden;
-    position: relative;
-  }
-  .bar-inner {
-    width: 40px;
-    height: 100%;
-    background: #4285f4;
-    border-radius: 7px;
-    position: absolute;
-    left: -40px;
-    animation: barmove 1.5s infinite linear;
-  }
-  @keyframes barmove {
-    0% { left: -40px;}
-    100% { left: 100px;}
-  }
-  #content-iframe {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    border: none;
-    opacity: 0;
-    transition: opacity 0.8s cubic-bezier(.4,0,.2,1);
-    z-index: 1;
-  }
-  #content-iframe.visible {
-    opacity: 1;
-  }
-</style>
+    <base target="_top">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เว็บแอป</title>
 </head>
 <body>
-<div id="loader">
-  <div class="bar-loader">
-    <div class="bar-inner"></div>
-  </div>
-</div>
-<iframe id="content-iframe"
-        src="https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycbyzhWjyXsPsK242-ceiAdtdEep4o0RBHOn5FaeUJXbaUD_eaEV7pcGFLSnakaUVBn5BYw/exec">
-</iframe>
-<script>
-  const loader = document.getElementById('loader');
-  const iframe = document.getElementById('content-iframe');
-  setTimeout(() => {
-    loader.classList.add('fadeout');
-    setTimeout(() => {
-      loader.style.display = 'none';
-      iframe.classList.add('visible');
-    }, 2000); // fadeout 2 วิ
-  }, 1500); // bar animation 1.5 วิ
-</script>
+    <iframe style="width: 100%; height: 100vh;" scrolling="yes" src="https://script.google.com/macros/s/AKfycby9r4o5u0mVacvMXkZlwuLfIriuJPLDrvV3ZisE1-CXWG72YVFw-7oq_4gCSj07dZHrjg/exec" frameborder="0"></iframe>
 </body>
 </html>
